@@ -1,0 +1,146 @@
+/* Reset default styles */
+body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    background-color: #111;
+    color: #fff;
+  }
+  
+  /* General Container */
+  .waitlist-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:120vh;
+    position: relative;
+    background-image: url('../Waitlist.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Content Section with form */
+  .content {
+    padding: 50px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+  }
+  
+  .content h1 {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  input, select {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none; 
+    border-bottom: 2px solid rgba(196, 186, 186, 0.7);
+    background-color: transparent; 
+    opacity: 50%;
+    color: white;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder with white opacity */
+  }
+  
+
+  button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 20px 40px;
+    margin-top: 10px;
+    width: 60%;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Country Select with flag */
+  .country-select {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .flag-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .footer-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-logo {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left p {
+    margin: 0;
+    color: gray;
+  }
+  
+  .footer-right {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 100px;
+    justify-content: space-between;
+  }
+  
+  .footer-links h4 {
+    margin: 0 15px;
+    padding: 10px;
+    color: gray;
+  }
+
+  

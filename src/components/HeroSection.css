@@ -1,0 +1,153 @@
+/* src/components/HeroSection.css */
+
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: black;
+  font-family: 'Helvetica', sans-serif;
+  font-style: normal;
+}
+
+/* Fullscreen container */
+.hero-section {
+  position: relative;
+  height: 300vh; /* 3 full viewports to allow scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: black;
+}
+
+/* Background image in the middle of the scroll */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 100vh; /* Middle of the scroll */
+  width: 100vw;
+  height: 150vh;
+  background: linear-gradient(180deg, #000000, #c27516, #f5f3f1, #000000);
+}
+
+/* Logo container */
+.logo-container {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo-container.relative {
+  position: relative;
+  top: auto; /* Reset the top value */
+  left: auto; /* Reset left value */
+  transform: none; /* Reset any translate positioning */
+  margin-top: 50px; /* Adjust margin for spacing */
+}
+
+.logo {
+  width: 500px;
+  height: auto;
+  transition: all 0.5s ease-in-out;
+}
+
+.logo-container.shrink .logo {
+  width: 150px;
+}
+
+/* Text and button container */
+.text-container {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  text-align: center;
+  position: relative;
+  width: 70%;
+  margin-top: 50px; /* Gives space for the logo */
+}
+
+.text-container.visible {
+  opacity: 1;
+}
+
+.text-container h1 {
+  font-size: 4.5rem;
+  color: white;
+}
+
+.cta-button {
+  background-color: white;
+  color: black;
+  padding: 20px 40px;
+  width: 30%;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 50px;
+}
+
+/* Cards container */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 80px; /* Adds space between the text and the cards */
+  position: relative;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Left and right cards */
+.cards-container.show-cards {
+  opacity: 1;
+}
+
+.card {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 1s ease-in-out;
+}
+
+/* Card on the left */
+.card-left {
+  bottom: -150px; /* Add spacing from bottom */
+  left: -300px; /* Hidden off the screen initially */
+}
+
+.cards-container.show-cards .card-left {
+  transform: translateX(400px); /* Slide into view */
+}
+
+/* Card on the right */
+.card-right {
+  bottom: -150px; /* Add spacing from bottom */
+  right: -300px; /* Hidden off the screen initially */
+}
+
+.cards-container.show-cards .card-right {
+  transform: translateX(-400px); /* Slide into view */
+}
+
+.card-top-left {
+  top: -700px; /* Adjusted for spacing */
+  left: -300px; /* Hidden off the screen initially */
+}
+
+.cards-container.show-cards .card-top-left {
+  transform: translateX(400px); /* Slide into view */
+}
+
+/* Card on the top right */
+.card-top-right {
+  top: -700px; /* Adjusted for spacing */
+  right: -300px; /* Hidden off the screen initially */
+}
+
+.cards-container.show-cards .card-top-right {
+  transform: translateX(-400px); /* Slide into view */
+}
